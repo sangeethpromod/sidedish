@@ -1,0 +1,21 @@
+{
+  "name": "sidedish",
+  "version": "0.1.0",
+  "description": "Sidedish: a small Tailwind CSS v4 component kit for Next.js. One command to install.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": { "types": "./index.d.ts", "default": "./index.js" },
+    "./sidedish.css": "./sidedish.css",
+    "./fonts.css": "./fonts.css",
+    "./sidedish.js": "./sidedish.js"
+  },
+  "bin": { "sidedish": "./bin/sidedish.mjs" },
+  "files": ["index.js", "index.d.ts", "sidedish.css", "sidedish.js", "fonts.css", "bin"],
+  "sideEffects": ["*.css", "./sidedish.js", "./index.js"],
+  "peerDependencies": { "react": ">=18", "tailwindcss": ">=4" },
+  "peerDependenciesMeta": { "react": { "optional": true } },
+  "keywords": ["nextjs", "react", "tailwindcss", "ui", "css", "web-components", "design-system"]
+}

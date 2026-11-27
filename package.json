@@ -1,0 +1,10 @@
+{
+  "name": "sidedish-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "scripts": {
+    "dev": "pnpm --filter @sidedish/docs dev",
+    "build": "pnpm --filter @sidedish/docs build",
+    "size": "node scripts/size.mjs"
+  }
+}

@@ -1,0 +1,19 @@
+version: 1
+applications:
+  - appRoot: apps/docs
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - cd ../.. && npm install -g pnpm@10.11.0 && pnpm install --frozen-lockfile && cd apps/docs
+        build:
+          commands:
+            - pnpm build
+      artifacts:
+        baseDirectory: out
+        files:
+          - "**/*"
+      cache:
+        paths:
+          - ../../node_modules/**/*
+          - .next/cache/**/*
