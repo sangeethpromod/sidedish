@@ -9,6 +9,9 @@ const sans = DM_Sans({ subsets: ["latin"], variable: "--sd-font-sans" });
 const mono = Red_Hat_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--sd-font-mono" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.sidedish.live"), // share previews need absolute image URLs
+  openGraph: { type: "website", siteName: "Sidedish" },
+  twitter: { card: "summary_large_image" },
   title: { default: "Sidedish", template: "%s · Sidedish" },
   description: "A small Tailwind CSS v4 component kit for Next.js. One command to install.",
   icons: { icon: "/icon.svg?v=2", apple: "/apple-icon.png" },

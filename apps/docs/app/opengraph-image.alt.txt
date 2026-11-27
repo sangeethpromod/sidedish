@@ -1,0 +1,1 @@
+An analytics dashboard built from Sidedish components

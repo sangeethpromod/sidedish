@@ -6,6 +6,7 @@ import { C } from "@/lib/data";
 import { Logo } from "@/components/logo";
 
 const GUIDES: [string, string][] = [["/", "Introduction"], ["/installation", "Installation"], ["/theming", "Theming"], ["/example", "Example dashboard"], ["/components", "All components"]];
+const REPO: [string, string][] = [["https://github.com/sangeethpromod/sidedish", "GitHub"], ["https://www.npmjs.com/package/sidedish", "npm"]];
 
 export function Sidebar() {
   const path = usePathname().replace(/\/$/, "") || "/";
@@ -25,7 +26,7 @@ export function Sidebar() {
       </Link>
       <input id="filter" type="search" placeholder="Search components…" aria-label="Search components" value={q} onChange={(e) => setQ(e.target.value)} />
       <p className="eyebrow">Getting started</p>
-      <nav>{GUIDES.map(([h, n]) => link(h, n))}</nav>
+      <nav>{[...GUIDES, ...REPO].map(([h, n]) => link(h, n))}</nav>
       <p className="eyebrow">Components</p>
       <nav>{C.map((c) => link("/" + c.id, c.name, c.wc))}</nav>
     </aside>

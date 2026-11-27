@@ -113,7 +113,7 @@ ${code(`pnpm dlx sidedish init`, 1)}
 <div class="table-wrap"><table><thead><tr><th>Step</th><th>Detail</th></tr></thead><tbody>
 <tr><td>Installs packages</td><td><code>sidedish</code>, <code>tailwindcss</code>, <code>@tailwindcss/postcss</code> and <code>postcss</code>, with pnpm, npm, yarn or bun picked from your lockfile.</td></tr>
 <tr><td>Adds <code>postcss.config.mjs</code></td><td>Only if you don't already have a PostCSS config.</td></tr>
-<tr><td>Patches <code>globals.css</code></td><td>Adds <code>@import "tailwindcss"</code> (if missing) and <code>@import "sidedish/sidedish.css"</code>.</td></tr>
+<tr><td>Patches <code>globals.css</code></td><td>Creates it if needed, then adds <code>@import "tailwindcss"</code> (if missing), <code>@import "sidedish/sidedish.css"</code> and the fonts import.</td></tr>
 <tr><td>Patches <code>app/layout.tsx</code></td><td>Imports <code>globals.css</code> and adds <code>&lt;Sidedish /&gt;</code> inside <code>&lt;body&gt;</code>. Works with <code>src/app</code> and .jsx/.js too.</td></tr>
 <tr><td>Loads fonts</td><td>DM Sans and Red Hat Mono. Skip with <code>--no-fonts</code>.</td></tr>
 <tr><td>TypeScript</td><td>Types for <code>&lt;sd-*&gt;</code> tags and <code>style={{ "--tone": … }}</code> come with the package.</td></tr>
@@ -158,7 +158,7 @@ export default function Page() {
 <div class="table-wrap"><table><thead><tr><th></th><th>Sidedish</th><th>shadcn/ui</th></tr></thead><tbody>
 <tr><td>Setup</td><td><code>pnpm dlx sidedish init</code></td><td><code>init</code>, then <code>add</code> per component</td></tr>
 <tr><td>Requires Tailwind</td><td>Yes (v4)</td><td>Yes</td></tr>
-<tr><td>Files added to your repo</td><td>None (one layout edit)</td><td>One file per component</td></tr>
+<tr><td>Files added to your repo</td><td>No component files, only config, CSS and layout edits</td><td>One file per component</td></tr>
 <tr><td>Runtime dependencies</td><td>0 (Tailwind is a peer)</td><td>Radix primitives, cva, clsx and others</td></tr>
 <tr><td>Works in Server Components</td><td>Yes, it's HTML and CSS</td><td>Interactive ones need <code>"use client"</code></td></tr>
 <tr><td>Customise</td><td>CSS variables and props</td><td>Edit the copied source</td></tr>

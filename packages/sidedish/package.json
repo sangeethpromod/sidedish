@@ -1,9 +1,12 @@
 {
   "name": "sidedish",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sidedish: a small Tailwind CSS v4 component kit for Next.js. One command to install.",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://www.sidedish.live",
+  "repository": { "type": "git", "url": "git+https://github.com/sangeethpromod/sidedish.git", "directory": "packages/sidedish" },
+  "bugs": "https://github.com/sangeethpromod/sidedish/issues",
   "main": "./index.js",
   "types": "./index.d.ts",
   "exports": {
