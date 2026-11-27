@@ -28,7 +28,7 @@ npx sidedish init
 
 ## Why a side dish?
 
-- **Light.** All the CSS and JavaScript come to under 10 KB gzipped, and `pnpm size` fails if they go over.
+- **Light.** All the CSS and JavaScript come to under 10 KB gzipped.
 - **Plain HTML first.** Write `<button>`, `<dialog>` or `<details>` and it's already styled. Most of it works in Server Components.
 - **Goes with Tailwind.** Styles sit in Tailwind's layers, so your utilities always win.
 - **No wrapper maze.** The interactive parts are six web components, plus a few small React helpers.
@@ -159,37 +159,6 @@ Pass your colours as a prop. They're rendered on the server, so there's no flash
 |------|------|
 | [`packages/sidedish`](packages/sidedish) | The npm package: CSS, web components, React helpers, `init` CLI |
 | [`apps/docs`](apps/docs) | The docs site (Next.js, static export), built with Sidedish itself |
-
-```bash
-pnpm install
-pnpm dev          # docs at http://localhost:3000
-pnpm build        # static site in apps/docs/out
-pnpm size         # CSS + JS gzip budget (10 KB)
-```
-
-<details>
-<summary><b>Deploy the docs</b></summary>
-
-<br>
-
-- **Vercel:** import the repo and set *Root Directory* to `apps/docs`.
-- **AWS Amplify:** connect the repo and set the app root to `apps/docs` when asked. [`amplify.yml`](amplify.yml) already points there.
-
-</details>
-
-<details>
-<summary><b>Publish the package</b></summary>
-
-<br>
-
-Bump `version` in [`packages/sidedish/package.json`](packages/sidedish/package.json), then:
-
-```bash
-cd packages/sidedish
-pnpm publish --access public
-```
-
-</details>
 
 ---
 

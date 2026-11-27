@@ -47,9 +47,3 @@ Flags: `--no-install`, `--no-fonts`.
 | `bin/sidedish.mjs` | The `init` CLI |
 
 The docs site lives in the repo at `apps/docs` and is not part of the npm package.
-
-## Publish
-
-```bash
-pnpm publish     # check that the name "sidedish" is free first
-```
